@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProAPI Solutions – ProAPI Platform</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #002366; /* royal blue */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700; /* gold */
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1581091012184-49c2c1c2ff17?fit=crop&w=1950&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta {
+      background-color: #FFD700;
+      color: #002366;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .hero .cta:hover {
+      background-color: #fff;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #002366;
+    }
+
+    /* Features Grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 1rem;
+      color: #002366;
+    }
+
+    .feature-card p {
+      color: #555;
+    }
+
+    /* Pricing Table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .pricing-table th {
+      background-color: #002366;
+      color: white;
+    }
+
+    .pricing-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .pricing-table a {
+      color: #FFD700;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .pricing-table a:hover {
+      color: #002366;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background-color: #002366;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #FFD700;
+      color: #002366;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">ProAPI Solutions</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Pro API Solutions for Every Industry</h1>
+    <p>Delivering reliable, secure, and scalable APIs that seamlessly connect web, software, and mobile applications, empowering businesses to streamline processes, foster integration, unlock actionable insights, and accelerate digital innovation. Our solutions enhance efficiency, drive collaboration, and enable organizations to stay ahead in an ever-evolving digital landscape.</p>
+    <a href="#contact" class="cta">Get Started</a>
+  </section>
+
+ <!-- About Section -->
+<section id="about">
+  <h2 style="margin-bottom:2rem;">About Us</h2>
+  <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:3rem;">
+    ProAPI Solutions is a leading provider of API development, integration, and management services for web, software, and mobile applications. Our mission is to empower businesses and developers with robust, scalable, and secure APIs that streamline operations, enhance connectivity, and drive digital transformation.
+  </p>
+
+  <!-- Vision & Mission Professional Cards -->
+  <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; max-width:1200px; margin:auto;">
+    
+    <!-- Vision Card -->
+    <div style="flex:1 1 400px; background-color:#ffffff; border-left:5px solid #002366; padding:2rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.1); transition:0.3s;">
+      <h3 style="color:#002366; margin-bottom:1rem; font-size:1.5rem;">Our Vision</h3>
+      <p style="color:#555; line-height:1.6;">
+        To become the go-to partner for innovative, reliable, and future-ready API solutions, connecting software ecosystems globally.
+      </p>
+    </div>
+    
+    <!-- Mission Card -->
+    <div style="flex:1 1 400px; background-color:#ffffff; border-left:5px solid #FFD700; padding:2rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.1); transition:0.3s;">
+      <h3 style="color:#002366; margin-bottom:1rem; font-size:1.5rem;">Our Mission</h3>
+      <ul style="color:#555; line-height:1.6; padding-left:1.5rem;">
+        <li>Deliver high-performance APIs that simplify data exchange between apps and systems.</li>
+        <li>Provide custom API solutions tailored to business needs.</li>
+        <li>Ensure security, scalability, and seamless integration across platforms.</li>
+        <li>Support developers and enterprises in building smarter, faster, and more connected applications.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>API Development</h3>
+        <p>Custom APIs for web, mobile, and software platforms tailored to your business needs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>API Integration</h3>
+        <p>Connecting third-party services to existing systems efficiently and securely.</p>
+      </div>
+      <div class="feature-card">
+        <h3>API Management</h3>
+        <p>Monitoring, scaling, and securing your API ecosystem for optimal performance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Consultancy</h3>
+        <p>Expert guidance on best practices for API design, deployment, and optimization.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Developer Support</h3>
+        <p>Comprehensive documentation, testing, and troubleshooting for smooth adoption.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Why Choose Us</h3>
+        <p>Expert team, reliable APIs, innovative solutions, and client-centric services designed to achieve your business goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <h2>Pricing (USD)</h2>
+    <table class="pricing-table">
+      <tr>
+        <th>API / Framework</th>
+        <th>Base Cost</th>
+        <th>VAT 7.5%</th>
+        <th>Total (USD)</th>
+        <th>Purchase</th>
+      </tr>
+      <tr>
+        <td>Authentication API</td>
+        <td>$500.00</td>
+        <td>$37.50</td>
+        <td>$537.50</td>
+        <td><a href="https://yourpaymentgateway.com/auth-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>User Management API</td>
+        <td>$400.00</td>
+        <td>$30.00</td>
+        <td>$430.00</td>
+        <td><a href="https://yourpaymentgateway.com/user-mgmt" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Payment & Transaction API</td>
+        <td>$600.00</td>
+        <td>$45.00</td>
+        <td>$645.00</td>
+        <td><a href="https://yourpaymentgateway.com/payment-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Notification API</td>
+        <td>$350.00</td>
+        <td>$26.25</td>
+        <td>$376.25</td>
+        <td><a href="https://yourpaymentgateway.com/notification-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Analytics & Reporting API</td>
+        <td>$450.00</td>
+        <td>$33.75</td>
+        <td>$483.75</td>
+        <td><a href="https://yourpaymentgateway.com/analytics-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>File Storage & Management API</td>
+        <td>$300.00</td>
+        <td>$22.50</td>
+        <td>$322.50</td>
+        <td><a href="https://yourpaymentgateway.com/file-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>iOS Framework & API</td>
+        <td>$914.00</td>
+        <td>$68.55</td>
+        <td>$982.55</td>
+        <td><a href="https://yourpaymentgateway.com/ios-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Android Framework & API</td>
+        <td>$718.00</td>
+        <td>$53.85</td>
+        <td>$771.85</td>
+        <td><a href="https://yourpaymentgateway.com/android-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Windows Framework & API</td>
+        <td>$612.00</td>
+        <td>$45.90</td>
+        <td>$657.90</td>
+        <td><a href="https://yourpaymentgateway.com/windows-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Security & Compliance Layer</td>
+        <td>$400.00</td>
+        <td>$30.00</td>
+        <td>$430.00</td>
+        <td><a href="https://yourpaymentgateway.com/security-api" target="_blank">Buy Now</a></td>
+      </tr>
+      <tr>
+        <td>Cloud Hosting & Infrastructure</td>
+        <td>$500.00</td>
+        <td>$37.50</td>
+        <td>$537.50</td>
+        <td><a href="https://yourpaymentgateway.com/cloud-hosting" target="_blank">Buy Now</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ProAPI Solutions. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
